@@ -1,5 +1,7 @@
 import  './styles.css';
 import { ReactComponent as Arrow} from '../../assets/img/arrowLeft.svg'
+
+
 function Pagination() {
   return (
 
