@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Form() {
-
   const movie = {
     id: 1,
     image:
@@ -11,10 +11,13 @@ function Form() {
     score: 4.5,
   };
 
-
   return (
     <div className="dsmovie-form-container">
-      <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
+      <img
+        className="dsmovie-movie-card-image"
+        src={movie.image}
+        alt={movie.title}
+      />
       <div className="dsmovie-card-bottom-container">
         <h3>{movie.title}</h3>
         <form className="dsmovie-form">
@@ -38,7 +41,9 @@ function Form() {
             </button>
           </div>
         </form>
-        <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+        <Link to="/">
+          <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+        </Link>
       </div>
     </div>
   );
