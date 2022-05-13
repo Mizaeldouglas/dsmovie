@@ -1,8 +1,26 @@
+import axios from "axios";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
+import { BASE_URL } from "utils/requests";
 import "./styles.css";
+import { useEffect } from 'react'
+
+
 
 function Listing() {
+
+	useEffect(() => {
+		axios.get(`${BASE_URL}/movies?size=12&page=0`).then(
+			res => {
+				console.log(res.data)
+			}
+		)
+		
+	}, []);
+
+
+
+
   return (
     <>
       <Pagination />
@@ -28,5 +46,6 @@ function Listing() {
     </>
   );
 }
+
 
 export default Listing;
