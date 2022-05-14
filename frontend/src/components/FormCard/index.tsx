@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
-import { Movie } from "types/movie";
-import { useEffect, useState } from 'react';
 import "./styles.css";
+
+import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import axios from "axios";
+
+import { Movie } from "types/movie";
 import { BASE_URL } from "utils/requests";
 
 type Props ={
@@ -19,7 +21,7 @@ function FormCard( { movieId }:Props ) {
 			.then(response =>{
 				setMovie(response.data)
 			})
-	}, []);
+	}, [movieId]);
 
 
   return (
